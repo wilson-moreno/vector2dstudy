@@ -18,10 +18,18 @@ public class Vector2DStudy {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Vector2D v = new Vector2D();
         
         Scanner input = new Scanner( System.in );
         
         System.out.println("Welcome to Vector 2D Study Program");
+        
+        System.out.print("\nPlease enter x coordinate of vector: ");
+        v.setX(input.nextDouble());
+        System.out.print("\nPlease enter y coordinate of vector: ");
+        v.setY(input.nextDouble());
+        
+        System.out.printf("\nThe magnitude of the vector is: %f \n", v.getMagnitude());
     }
     
 }
