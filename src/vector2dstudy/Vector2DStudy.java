@@ -20,6 +20,8 @@ public class Vector2DStudy {
         // TODO code application logic here
         
         Scanner input = new Scanner( System.in );
+        
+        System.out.println("Welcome to Vector 2D Study Program");
     }
     
 }
