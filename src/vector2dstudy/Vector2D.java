@@ -12,48 +12,52 @@ import java.lang.Math;
  * @author Wilson S. Moreno
  */
 public class Vector2D {
-    private double x;
-    private double y;
-        
-    public Vector2D(double x, double y){
-        this.x = x;
-        this.y = y;
-    }
+    private Point2D tail;
+    private Point2D head;
     
     public Vector2D(){
-        this.x = 0;
-        this.y = 0;
+        this.tail = new Point2D();
+        this.head = new Point2D();
+    }
+    
+    public Vector2D(Point2D head, Point2D tail){
+        this.head = head;
+        this.tail = tail;
     }
 
     /**
-     * @return the x
+     * @return the tail
      */
-    public double getX() {
-        return x;
+    public Point2D getTail() {
+        return tail;
     }
 
     /**
-     * @param x the x to set
+     * @param tail the tail to set
      */
-    public void setX(double x) {
-        this.x = x;
+    public void setTail(Point2D tail) {
+        this.tail = tail;
     }
 
     /**
-     * @return the y
+     * @return the head
      */
-    public double getY() {
-        return y;
+    public Point2D getHead() {
+        return head;
     }
 
     /**
-     * @param y the y to set
+     * @param head the head to set
      */
-    public void setY(double y) {
-        this.y = y;
+    public void setHead(Point2D head) {
+        this.head = head;
     }
     
     public double getMagnitude(){
-        return Math.sqrt( x*x + y*y );
+        return Math.sqrt(Math.pow(head.getX()-tail.getX(),2) + Math.pow(head.getY()-tail.getY(), 2));
+    }
+    
+    public double getDirection(){
+        return Math.atan((head.getY()-tail.getY()) / (head.getX()-tail.getX()));
     }
 }
