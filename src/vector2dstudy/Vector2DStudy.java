@@ -5,9 +5,11 @@
  */
 package vector2dstudy;
 
+import java.util.Scanner;
+
 /**
  *
- * @author Dell
+ * @author Wilson S. Moreno
  */
 public class Vector2DStudy {
 
@@ -16,6 +18,8 @@ public class Vector2DStudy {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        Scanner input = new Scanner( System.in );
     }
     
 }
